@@ -30,10 +30,20 @@ namespace ThreadingTest
 
         public void WindowKeyDown(object sender, KeyEventArgs e)
         {
-            TestMethod();
+            TestMethod1();
         }
 
-        private void TestMethod()
+        private void TestButton1_Click(object sender, RoutedEventArgs e)
+        {
+            TestMethod1();
+        }
+
+        private void TestButton2_Click(object sender, RoutedEventArgs e)
+        {
+            TestMethod2();
+        }
+
+        private void TestMethod1()
         {
             bool keepRunning = true;
             while (keepRunning)
@@ -44,9 +54,14 @@ namespace ThreadingTest
             }
         }
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
+        private void TestMethod2()
         {
-            TestMethod();
+            for (int i = 0; i < 3; i++)
+            {
+                testInt++;
+                TestLabel.Content = testInt;
+                Thread.Sleep(1000);
+            }
         }
     }
 }
