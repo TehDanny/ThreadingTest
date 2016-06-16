@@ -8,8 +8,9 @@
         Title="MainWindow" Height="350" Width="525"
         KeyDown="WindowKeyDown">
     <Grid>
-        <Button x:Name="TestButton1" Content="test1" HorizontalAlignment="Left" Margin="148,56,0,0" VerticalAlignment="Top" Width="75" Click="TestButton1_Click"/>
-        <Button x:Name="TestButton2" Content="test2" HorizontalAlignment="Left" Margin="263,56,0,0" VerticalAlignment="Top" Width="75" Click="TestButton2_Click"/>
+        <Button x:Name="TestButton1" Content="test1" HorizontalAlignment="Left" Margin="77,56,0,0" VerticalAlignment="Top" Width="75" Click="TestButton1_Click"/>
+        <Button x:Name="TestButton2" Content="test2" HorizontalAlignment="Left" Margin="205,56,0,0" VerticalAlignment="Top" Width="75" Click="TestButton2_Click"/>
+        <Button x:Name="TestButton3" Content="test3" HorizontalAlignment="Left" Margin="315,56,0,0" VerticalAlignment="Top" Width="75" Click="TestButton3_Click"/>
         <Label x:Name="TestLabel" Content="test" HorizontalAlignment="Left" Margin="223,127,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

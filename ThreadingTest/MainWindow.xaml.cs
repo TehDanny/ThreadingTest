@@ -43,6 +43,13 @@ namespace ThreadingTest
             TestMethod2();
         }
 
+        private void TestButton3_Click(object sender, RoutedEventArgs e)
+        {
+            ThreadStart test3 = new ThreadStart(TestMethod3);
+            Thread thread1 = new Thread(test3);
+            thread1.Start();
+        }
+
         private void TestMethod1()
         {
             bool keepRunning = true;
@@ -60,6 +67,20 @@ namespace ThreadingTest
             {
                 testInt++;
                 TestLabel.Content = testInt;
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void TestMethod3()
+        {
+            bool keepRunning = true;
+            while (keepRunning)
+            {
+                testInt++;
+                this.Dispatcher.Invoke((Action)(() =>
+                {
+                    TestLabel.Content = testInt;
+                }));
                 Thread.Sleep(1000);
             }
         }
