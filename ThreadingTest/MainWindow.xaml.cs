@@ -73,6 +73,7 @@ namespace ThreadingTest
 
         private void TestMethod3()
         {
+            // http://stackoverflow.com/questions/9732709/the-calling-thread-cannot-access-this-object-because-a-different-thread-owns-it
             bool keepRunning = true;
             while (keepRunning)
             {
